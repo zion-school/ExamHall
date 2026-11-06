@@ -1,0 +1,53 @@
+$CATEGORY: V/Science/01_Plants
+
+// === Choose ===
+
+::Green part::Which part of the plant is shown in green here?<br><img src\="media/plant.svg" alt\="" width\="160">{
+	=Leaf
+	~Root
+	~Stem
+	~Flower
+}
+
+::Food factory::Plants make their food in the{
+	=leaves
+	~roots
+	~flowers
+	~seeds
+}
+
+::Needs of a plant::Which of these does a plant need to make food? (Choose all that apply){
+	~%33.33333%Sunlight
+	~%33.33333%Water
+	~%33.33333%Air
+	~%-100%Sugar
+}
+
+// === True or false ===
+
+::Roots absorb::Roots take in water from the soil.{T}
+
+::Night food::Plants make food only at night.{F}
+
+// === Fill in the blanks ===
+
+// [tag:Fill up]
+::Green pigment::The green colour of leaves comes from {=chlorophyll =chlorophyl}.
+
+// [tag:Fill up]
+::Photosynthesis::Plants make food by a process called {=photosynthesis} using {=sunlight =sun light =light} and {=carbon dioxide =CO2}.
+
+// === Match ===
+
+::Plant parts::Match each part with its work{
+	=Root -> Holds the plant in the soil
+	=Stem -> Carries water to the leaves
+	=Leaf -> Makes food
+	=Flower -> Turns into fruit
+}
+
+// === Answer briefly ===
+
+// [zion:mark=2]
+// [key:Sunlight, water and carbon dioxide; chlorophyll in the leaves; food (sugar) and oxygen are made]
+::Why green::Why are leaves green, and what do they make?{}

@@ -1,0 +1,173 @@
+{
+    "exam": "fractions-unit-test-20261106-1323-1",
+    "user": "fenn",
+    "n": 1,
+    "status": "graded",
+    "token": "mqwc4coqtzag6z42gz3vg3lxgmvhasjy",
+    "epoch": 1,
+    "seq": 14,
+    "started": "2026-11-03T10:05:22+05:30",
+    "deadline": null,
+    "submitted": "2026-11-03T10:21:38+05:30",
+    "late": false,
+    "auto_submitted": false,
+    "seed": 782761752,
+    "unlock": null,
+    "slots": [
+        {
+            "slot": 1,
+            "section": 0,
+            "key": "q8081f8e41e",
+            "mark": 1,
+            "layout": []
+        },
+        {
+            "slot": 2,
+            "section": 0,
+            "key": "qcaeee241cc",
+            "mark": 1,
+            "layout": []
+        },
+        {
+            "slot": 3,
+            "section": 0,
+            "key": "qec504c5245",
+            "mark": 1,
+            "layout": {
+                "choices": [
+                    3,
+                    1,
+                    2,
+                    0
+                ]
+            }
+        },
+        {
+            "slot": 4,
+            "section": 0,
+            "key": "q4f49cffd94",
+            "mark": 1,
+            "layout": {
+                "choices": [
+                    1,
+                    3,
+                    2,
+                    0
+                ]
+            }
+        },
+        {
+            "slot": 5,
+            "section": 0,
+            "key": "qde1035c108",
+            "mark": 1,
+            "layout": []
+        },
+        {
+            "slot": 6,
+            "section": 0,
+            "key": "q0a0c9fccae",
+            "mark": 1,
+            "layout": []
+        },
+        {
+            "slot": 7,
+            "section": 0,
+            "key": "qbf3453c851",
+            "mark": 2,
+            "layout": []
+        },
+        {
+            "slot": 8,
+            "section": 0,
+            "key": "qfb9c9699c8",
+            "mark": 1,
+            "layout": []
+        }
+    ],
+    "choose": [],
+    "answers": {
+        "1": "6",
+        "2": "3.75",
+        "3": 0,
+        "4": 0,
+        "5": "kepboard",
+        "6": true,
+        "7": [
+            "9",
+            "5"
+        ],
+        "8": "9"
+    },
+    "flags": [],
+    "grades": {
+        "1": {
+            "fraction": 0,
+            "state": "graded",
+            "mark": 0,
+            "by": "auto"
+        },
+        "2": {
+            "fraction": 0,
+            "state": "graded",
+            "mark": 0,
+            "by": "auto"
+        },
+        "3": {
+            "fraction": 1,
+            "state": "graded",
+            "mark": 1,
+            "by": "auto"
+        },
+        "4": {
+            "fraction": 0,
+            "state": "graded",
+            "mark": 0,
+            "by": "auto"
+        },
+        "5": {
+            "fraction": 0,
+            "state": "graded",
+            "mark": 0,
+            "by": "auto"
+        },
+        "6": {
+            "fraction": 0,
+            "state": "graded",
+            "mark": 0,
+            "by": "auto"
+        },
+        "7": {
+            "fraction": 0.5,
+            "state": "graded",
+            "blanks": [
+                0,
+                1
+            ],
+            "mark": 1,
+            "by": "auto",
+            "blank_info": []
+        },
+        "8": {
+            "fraction": 1,
+            "state": "graded",
+            "mark": 1,
+            "by": "auto"
+        }
+    },
+    "score": 3,
+    "max": 9,
+    "events": {
+        "saves": 14,
+        "blur": 1,
+        "offline_ms": 0
+    },
+    "saved_at": "2026-11-03T10:21:38+05:30",
+    "last_seen": "2026-11-03T10:21:38+05:30",
+    "paused_sec": 0,
+    "pauses": 0,
+    "student": {
+        "name": "Fenn Rudo",
+        "class": "5"
+    }
+}

@@ -1,0 +1,253 @@
+{
+    "exam": "fractions-unit-test-20261106-1323-1",
+    "published": "2026-11-06T13:23:34+05:30",
+    "max_marks": 9,
+    "questions": {
+        "q4f49cffd94": {
+            "type": "multichoice",
+            "name": "Bigger fraction",
+            "text": "Which fraction is the biggest?",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "single": true,
+            "shuffle": true,
+            "answers": [
+                {
+                    "text": "1/4",
+                    "fraction": 0
+                },
+                {
+                    "text": "1/3",
+                    "fraction": 0
+                },
+                {
+                    "text": "1/2",
+                    "fraction": 1
+                },
+                {
+                    "text": "1/5",
+                    "fraction": 0
+                }
+            ],
+            "id": "q4f49cffd94",
+            "category": "V/Maths/03_Fractions",
+            "section": "Choose",
+            "number": 1
+        },
+        "qec504c5245": {
+            "type": "multichoice",
+            "name": "Equivalent",
+            "text": "Which fraction is equal to 2/4?",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "single": true,
+            "shuffle": true,
+            "answers": [
+                {
+                    "text": "1/2",
+                    "fraction": 1
+                },
+                {
+                    "text": "2/8",
+                    "fraction": 0
+                },
+                {
+                    "text": "4/2",
+                    "fraction": 0
+                },
+                {
+                    "text": "1/4",
+                    "fraction": 0
+                }
+            ],
+            "id": "qec504c5245",
+            "category": "V/Maths/03_Fractions",
+            "section": "Choose",
+            "number": 2
+        },
+        "qfb9c9699c8": {
+            "type": "numerical",
+            "name": "Half of 18",
+            "text": "What is half of 18?",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "answers": [
+                {
+                    "value": 9,
+                    "tolerance": 0,
+                    "fraction": 1
+                }
+            ],
+            "id": "qfb9c9699c8",
+            "category": "V/Maths/03_Fractions",
+            "section": "Work it out",
+            "number": 1
+        },
+        "q8081f8e41e": {
+            "type": "numerical",
+            "name": "Quarter of 20",
+            "text": "What is 1/4 of 20?",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "answers": [
+                {
+                    "value": 5,
+                    "tolerance": 0,
+                    "fraction": 1
+                }
+            ],
+            "id": "q8081f8e41e",
+            "category": "V/Maths/03_Fractions",
+            "section": "Work it out",
+            "number": 2
+        },
+        "qcaeee241cc": {
+            "type": "numerical",
+            "name": "Decimal",
+            "text": "Write 3/4 as a decimal.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "answers": [
+                {
+                    "value": 0.75,
+                    "tolerance": 0.001,
+                    "fraction": 1
+                }
+            ],
+            "id": "qcaeee241cc",
+            "category": "V/Maths/03_Fractions",
+            "section": "Work it out",
+            "number": 3
+        },
+        "qde1035c108": {
+            "type": "shortanswer",
+            "name": "Add fractions",
+            "text": "1/5 + 2/5 = ? (write it as a fraction)",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "answers": [
+                {
+                    "text": "3/5",
+                    "fraction": 1
+                }
+            ],
+            "usecase": false,
+            "id": "qde1035c108",
+            "category": "V/Maths/03_Fractions",
+            "section": "Work it out",
+            "number": 4
+        },
+        "qbf3453c851": {
+            "type": "multiblank",
+            "name": "Pizza",
+            "text": "A pizza is cut into {#1} equal slices. Belo eats 3 of them, so {#2} slices are left.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 2,
+            "missing_word": false,
+            "blanks": [
+                {
+                    "type": "numerical",
+                    "answers": [
+                        {
+                            "value": 8,
+                            "tolerance": 0,
+                            "fraction": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "numerical",
+                    "answers": [
+                        {
+                            "value": 5,
+                            "tolerance": 0,
+                            "fraction": 1
+                        }
+                    ]
+                }
+            ],
+            "id": "qbf3453c851",
+            "category": "V/Maths/03_Fractions",
+            "section": "Work it out",
+            "number": 5
+        },
+        "q0a0c9fccae": {
+            "type": "truefalse",
+            "name": "Proper fraction",
+            "text": "7/4 is a proper fraction.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "correct": false,
+            "feedback_true": "",
+            "feedback_false": "",
+            "id": "q0a0c9fccae",
+            "category": "V/Maths/03_Fractions",
+            "section": "True or false",
+            "number": 1
+        }
+    },
+    "sections": [
+        {
+            "title": "",
+            "shuffle": true,
+            "choose": 0,
+            "slots": [
+                {
+                    "kind": "fixed",
+                    "q": "q4f49cffd94",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qec504c5245",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qfb9c9699c8",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "q8081f8e41e",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qcaeee241cc",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qde1035c108",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qbf3453c851",
+                    "mark": 2
+                },
+                {
+                    "kind": "fixed",
+                    "q": "q0a0c9fccae",
+                    "mark": 1
+                }
+            ]
+        }
+    ]
+}

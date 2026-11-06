@@ -1,0 +1,120 @@
+// The phone pages' icons: 7x7 pictures, '#' black, each under its name
+// and what it marks. `php lib/make_icons.php` makes icons/<name>.wbmp of
+// them; wap_icon() puts one on a text line.
+
+pencil To do
+.....#.
+....###
+...###.
+..###..
+.###...
+##.....
+#......
+
+lock   Locked
+..###..
+.#...#.
+.#...#.
+#######
+###.###
+###.###
+#######
+
+cal    Coming up; when an exam opens and closes
+.#...#.
+#######
+#.....#
+#######
+#.#.#.#
+#.....#
+#######
+
+tick   Done; a right answer
+......#
+.....##
+#...###
+##.###.
+#####..
+.###...
+..#....
+
+clock  Time limit
+..###..
+.#.#.#.
+#..#..#
+#..##.#
+#.....#
+.#...#.
+..###..
+
+key    Exam code
+.......
+.##....
+#..#...
+#..####
+#..#.##
+.##..#.
+.......
+
+flag   Flagged (alt "?" in the Overview)
+####...
+######.
+######.
+####...
+#......
+#......
+#......
+
+box1   Answered (alt "*")
+#######
+#.....#
+#.###.#
+#.###.#
+#.###.#
+#.....#
+#######
+
+box0   Not answered (alt "-")
+#######
+#.....#
+#.....#
+#.....#
+#.....#
+#.....#
+#######
+
+cross  A wrong answer
+##...##
+###.###
+.#####.
+..###..
+.#####.
+###.###
+##...##
+
+half   Part marks
+..###..
+.#..##.
+#...###
+#...###
+#...###
+.#..##.
+..###..
+
+wait   Being marked
+#######
+.#...#.
+..#.#..
+...#...
+..###..
+.#####.
+#######
+
+coins  Coins earned in Zion Bank
+.#####.
+#.....#
+.#####.
+#.....#
+.#####.
+#.....#
+.#####.

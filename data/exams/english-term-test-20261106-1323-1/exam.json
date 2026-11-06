@@ -1,0 +1,97 @@
+{
+    "id": "english-term-test-20261106-1323-1",
+    "title": "English Term Test",
+    "subject": "English",
+    "classes": [
+        "5"
+    ],
+    "users": [],
+    "instructions": "Answer every question in Part A. In Part B, write about any two topics.",
+    "status": "published",
+    "hidden": false,
+    "open_at": "",
+    "close_at": "",
+    "time_limit_min": 0,
+    "attempts": 1,
+    "grade_method": "highest",
+    "per_page": 0,
+    "shuffle_questions": true,
+    "shuffle_choices": true,
+    "review": "after_close",
+    "bands": [],
+    "access_code": "",
+    "grading": {
+        "llm": "off",
+        "fuzzy": true,
+        "spelling_penalty": 0,
+        "ignore_case": true,
+        "ignore_spaces": true,
+        "ignore_punctuation": true
+    },
+    "reward": {
+        "enabled": false,
+        "formula": "percent >= 90 ? 10 : percent >= 75 ? 5 : percent >= 50 ? 2 : 0",
+        "max": 10,
+        "daily_max": 0,
+        "payout": "by_question_types",
+        "count": "best"
+    },
+    "sections": [
+        {
+            "title": "Part A - Grammar",
+            "shuffle": false,
+            "choose": 0,
+            "items": [
+                {
+                    "q": "q4c32cbdf5d",
+                    "mark": 1
+                },
+                {
+                    "q": "qa0e25142ba",
+                    "mark": 1
+                },
+                {
+                    "q": "qafeea3c6db",
+                    "mark": 1
+                },
+                {
+                    "q": "qe4294cc849",
+                    "mark": 1
+                },
+                {
+                    "q": "q8570b35da5",
+                    "mark": 2
+                },
+                {
+                    "q": "qa260a8363b",
+                    "mark": 1
+                }
+            ]
+        },
+        {
+            "title": "Part B - Writing",
+            "shuffle": false,
+            "choose": 2,
+            "items": [
+                {
+                    "q": "q488f0c1e26",
+                    "mark": 4
+                },
+                {
+                    "q": "qa66b8c6859",
+                    "mark": 4
+                },
+                {
+                    "q": "q25daebd8f0",
+                    "mark": 4
+                }
+            ]
+        }
+    ],
+    "created": "2026-11-06T13:23:34+05:30",
+    "created_by": "t_ondra",
+    "modified": "2026-11-06T13:23:34+05:30",
+    "modified_by": "t_ondra",
+    "published": "2026-11-06T13:23:34+05:30",
+    "reopened": ""
+}

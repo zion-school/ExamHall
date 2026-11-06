@@ -1,0 +1,300 @@
+{
+    "exam": "plants-practice-20261106-1323-1",
+    "published": "2026-11-06T13:23:34+05:30",
+    "max_marks": 10,
+    "questions": {
+        "q935f147af7": {
+            "type": "multichoice",
+            "name": "Green part",
+            "text": "Which part of the plant is shown in green here?<br><img src=\"media/plant.svg\" alt=\"\" width=\"160\">",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "single": true,
+            "shuffle": true,
+            "answers": [
+                {
+                    "text": "Leaf",
+                    "fraction": 1
+                },
+                {
+                    "text": "Root",
+                    "fraction": 0
+                },
+                {
+                    "text": "Stem",
+                    "fraction": 0
+                },
+                {
+                    "text": "Flower",
+                    "fraction": 0
+                }
+            ],
+            "id": "q935f147af7",
+            "category": "V/Science/01_Plants",
+            "section": "Choose",
+            "number": 1
+        },
+        "qc54bfa8bb5": {
+            "type": "multichoice",
+            "name": "Food factory",
+            "text": "Plants make their food in the",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "single": true,
+            "shuffle": true,
+            "answers": [
+                {
+                    "text": "leaves",
+                    "fraction": 1
+                },
+                {
+                    "text": "roots",
+                    "fraction": 0
+                },
+                {
+                    "text": "flowers",
+                    "fraction": 0
+                },
+                {
+                    "text": "seeds",
+                    "fraction": 0
+                }
+            ],
+            "id": "qc54bfa8bb5",
+            "category": "V/Science/01_Plants",
+            "section": "Choose",
+            "number": 2
+        },
+        "q2e5b0271b0": {
+            "type": "multichoice",
+            "name": "Needs of a plant",
+            "text": "Which of these does a plant need to make food? (Choose all that apply)",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "single": false,
+            "shuffle": true,
+            "answers": [
+                {
+                    "text": "Sunlight",
+                    "fraction": 0.33333329999999994
+                },
+                {
+                    "text": "Water",
+                    "fraction": 0.33333329999999994
+                },
+                {
+                    "text": "Air",
+                    "fraction": 0.33333329999999994
+                },
+                {
+                    "text": "Sugar",
+                    "fraction": -1
+                }
+            ],
+            "id": "q2e5b0271b0",
+            "category": "V/Science/01_Plants",
+            "section": "Choose",
+            "number": 3
+        },
+        "qfaf320cbb5": {
+            "type": "truefalse",
+            "name": "Roots absorb",
+            "text": "Roots take in water from the soil.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "correct": true,
+            "feedback_true": "",
+            "feedback_false": "",
+            "id": "qfaf320cbb5",
+            "category": "V/Science/01_Plants",
+            "section": "True or false",
+            "number": 1
+        },
+        "qfa0871be00": {
+            "type": "truefalse",
+            "name": "Night food",
+            "text": "Plants make food only at night.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "correct": false,
+            "feedback_true": "",
+            "feedback_false": "",
+            "id": "qfa0871be00",
+            "category": "V/Science/01_Plants",
+            "section": "True or false",
+            "number": 2
+        },
+        "q5e32185314": {
+            "type": "shortanswer",
+            "name": "Green pigment",
+            "text": "The green colour of leaves comes from _____.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": true,
+            "answers": [
+                {
+                    "text": "chlorophyll",
+                    "fraction": 1
+                },
+                {
+                    "text": "chlorophyl",
+                    "fraction": 1
+                }
+            ],
+            "usecase": false,
+            "id": "q5e32185314",
+            "category": "V/Science/01_Plants",
+            "section": "Fill in the blanks",
+            "number": 1
+        },
+        "q9e7076d80e": {
+            "type": "multiblank",
+            "name": "Photosynthesis",
+            "text": "Plants make food by a process called {#1} using {#2} and {#3}.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 3,
+            "missing_word": false,
+            "blanks": [
+                {
+                    "type": "shortanswer",
+                    "usecase": false,
+                    "answers": [
+                        {
+                            "text": "photosynthesis",
+                            "fraction": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "shortanswer",
+                    "usecase": false,
+                    "answers": [
+                        {
+                            "text": "sunlight",
+                            "fraction": 1
+                        },
+                        {
+                            "text": "sun light",
+                            "fraction": 1
+                        },
+                        {
+                            "text": "light",
+                            "fraction": 1
+                        }
+                    ]
+                },
+                {
+                    "type": "shortanswer",
+                    "usecase": false,
+                    "answers": [
+                        {
+                            "text": "carbon dioxide",
+                            "fraction": 1
+                        },
+                        {
+                            "text": "CO2",
+                            "fraction": 1
+                        }
+                    ]
+                }
+            ],
+            "id": "q9e7076d80e",
+            "category": "V/Science/01_Plants",
+            "section": "Fill in the blanks",
+            "number": 2
+        },
+        "q63be7a4f18": {
+            "type": "match",
+            "name": "Plant parts",
+            "text": "Match each part with its work",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "shuffle": true,
+            "pairs": [
+                {
+                    "question": "Root",
+                    "answer": "Holds the plant in the soil"
+                },
+                {
+                    "question": "Stem",
+                    "answer": "Carries water to the leaves"
+                },
+                {
+                    "question": "Leaf",
+                    "answer": "Makes food"
+                },
+                {
+                    "question": "Flower",
+                    "answer": "Turns into fruit"
+                }
+            ],
+            "id": "q63be7a4f18",
+            "category": "V/Science/01_Plants",
+            "section": "Match",
+            "number": 1
+        }
+    },
+    "sections": [
+        {
+            "title": "",
+            "shuffle": true,
+            "choose": 0,
+            "slots": [
+                {
+                    "kind": "fixed",
+                    "q": "q935f147af7",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qc54bfa8bb5",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "q2e5b0271b0",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qfaf320cbb5",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qfa0871be00",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "q5e32185314",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "q9e7076d80e",
+                    "mark": 3
+                },
+                {
+                    "kind": "fixed",
+                    "q": "q63be7a4f18",
+                    "mark": 1
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,234 @@
+{
+    "exam": "computer-parts-quiz-20261106-1323-1",
+    "published": "2026-11-06T13:23:34+05:30",
+    "max_marks": 7,
+    "questions": {
+        "q5163eb4826": {
+            "type": "multichoice",
+            "name": "Monitor",
+            "text": "Identify this part of a computer.<br><img src=\"media/monitor.svg\" alt=\"\" width=\"160\">",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "single": true,
+            "shuffle": true,
+            "answers": [
+                {
+                    "text": "Monitor",
+                    "fraction": 1
+                },
+                {
+                    "text": "Keyboard",
+                    "fraction": 0
+                },
+                {
+                    "text": "Mouse",
+                    "fraction": 0
+                },
+                {
+                    "text": "Printer",
+                    "fraction": 0
+                }
+            ],
+            "id": "q5163eb4826",
+            "category": "IV/Computer-Science/01_Computer_Parts",
+            "section": "Choose",
+            "number": 1
+        },
+        "qa668a9e1fb": {
+            "type": "multichoice",
+            "name": "Brain",
+            "text": "Which part is called the brain of the computer?",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "single": true,
+            "shuffle": true,
+            "answers": [
+                {
+                    "text": "CPU",
+                    "fraction": 1
+                },
+                {
+                    "text": "Monitor",
+                    "fraction": 0
+                },
+                {
+                    "text": "Speaker",
+                    "fraction": 0
+                },
+                {
+                    "text": "Mouse",
+                    "fraction": 0
+                }
+            ],
+            "id": "qa668a9e1fb",
+            "category": "IV/Computer-Science/01_Computer_Parts",
+            "section": "Choose",
+            "number": 2
+        },
+        "qd08c7da415": {
+            "type": "multichoice",
+            "name": "Input devices",
+            "text": "Which of these are input devices? (Choose all that apply)",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "single": false,
+            "shuffle": true,
+            "answers": [
+                {
+                    "text": "Keyboard",
+                    "fraction": 0.5
+                },
+                {
+                    "text": "Mouse",
+                    "fraction": 0.5
+                },
+                {
+                    "text": "Printer",
+                    "fraction": -1
+                },
+                {
+                    "text": "Speaker",
+                    "fraction": -1
+                }
+            ],
+            "id": "qd08c7da415",
+            "category": "IV/Computer-Science/01_Computer_Parts",
+            "section": "Choose",
+            "number": 3
+        },
+        "qf8fbd2b31e": {
+            "type": "truefalse",
+            "name": "Speakers",
+            "text": "Speakers are used to hear sound.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "correct": true,
+            "feedback_true": "",
+            "feedback_false": "",
+            "id": "qf8fbd2b31e",
+            "category": "IV/Computer-Science/01_Computer_Parts",
+            "section": "True or false",
+            "number": 1
+        },
+        "q43e1326948": {
+            "type": "truefalse",
+            "name": "Mouse typing",
+            "text": "We type letters with the mouse.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "correct": false,
+            "feedback_true": "",
+            "feedback_false": "",
+            "id": "q43e1326948",
+            "category": "IV/Computer-Science/01_Computer_Parts",
+            "section": "True or false",
+            "number": 2
+        },
+        "qa9abbe5465": {
+            "type": "shortanswer",
+            "name": "Printer",
+            "text": "The device that prints on paper is the _____.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": true,
+            "answers": [
+                {
+                    "text": "printer",
+                    "fraction": 1
+                }
+            ],
+            "usecase": false,
+            "id": "qa9abbe5465",
+            "category": "IV/Computer-Science/01_Computer_Parts",
+            "section": "Name it",
+            "number": 1
+        },
+        "q51c8b25a58": {
+            "type": "match",
+            "name": "Devices and uses",
+            "text": "Match the device with its use",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "shuffle": true,
+            "pairs": [
+                {
+                    "question": "Keyboard",
+                    "answer": "Typing"
+                },
+                {
+                    "question": "Mouse",
+                    "answer": "Pointing and clicking"
+                },
+                {
+                    "question": "Monitor",
+                    "answer": "Showing pictures and text"
+                },
+                {
+                    "question": "Speaker",
+                    "answer": "Playing sound"
+                }
+            ],
+            "id": "q51c8b25a58",
+            "category": "IV/Computer-Science/01_Computer_Parts",
+            "section": "Match",
+            "number": 1
+        }
+    },
+    "sections": [
+        {
+            "title": "",
+            "shuffle": true,
+            "choose": 0,
+            "slots": [
+                {
+                    "kind": "fixed",
+                    "q": "q5163eb4826",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qa668a9e1fb",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qd08c7da415",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qf8fbd2b31e",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "q43e1326948",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qa9abbe5465",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "q51c8b25a58",
+                    "mark": 1
+                }
+            ]
+        }
+    ]
+}

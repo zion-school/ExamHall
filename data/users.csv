@@ -1,0 +1,10 @@
+name,username,password,email,class,date_of_birth
+Administrator,admin,admin,,,
+"Ondra Vale",t_ondra,ondra,,,
+"Tobin Hask",t_tobin,tobin,,,
+"Aril Tovan",aril,1111,,5,12-Mar-2016
+"Belo Marrin",belo,2222,,5,04-Jul-2016
+"Davi Orlen",davi,3333,,5,21-Oct-2015
+"Fenn Rudo",fenn,4444,,5,09-Jan-2016
+"Cira Dunvale",cira,5555,,4,15-Aug-2017
+"Juno Pellan",juno,6666,,4,30-May-2017

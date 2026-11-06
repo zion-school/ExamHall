@@ -1,0 +1,377 @@
+/*
+ * Copyright (c) 2026 Zion Nursery & Primary School, Kovaipudur
+ * SPDX-License-Identifier: MIT
+ *
+ * Student pages: exam list, start page, exam player and results.
+ * The player fits lab PCs at 1366x768 and 1024x800 without page scrolling
+ * (top bar 56px + bottom bar 68px; the question area scrolls on its own).
+ */
+
+/* ---------- Exam list ---------- */
+.group-title { display: flex; align-items: center; gap: 8px; font-size: var(--fs-body); color: var(--ink-2); margin: 20px 0 10px; }
+.exam-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 12px; }
+.exam-card {
+    display: flex; align-items: center; gap: 14px; padding: 14px 16px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow);
+    color: var(--ink); text-decoration: none; transition: transform .12s, box-shadow .12s, border-color .12s;
+}
+.exam-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: #c9d6e6; color: var(--ink); }
+.exam-card-icon {
+    flex: 0 0 48px; height: 48px; border-radius: 14px; display: grid; place-items: center;
+    font-size: 22px; font-weight: 700; background: var(--blue-soft); color: var(--blue-dark);
+}
+.tint-0 { background: var(--blue-soft); color: var(--blue-dark); }
+.tint-1 { background: var(--orange-soft); color: #9a4d00; }
+.tint-2 { background: var(--green-soft); color: #13692e; }
+.tint-3 { background: #e0f7f7; color: #0b6e6e; }
+.tint-4 { background: var(--amber-soft); color: #7a4a00; }
+.tint-5 { background: #f3e8fd; color: #6b21a8; }
+.state-in_progress .exam-card-icon { box-shadow: 0 0 0 2px var(--orange); }
+.state-locked .exam-card-icon, .state-closed .exam-card-icon, .state-no_attempts .exam-card-icon { background: var(--bg); color: var(--ink-3); }
+.exam-card-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.exam-card-body strong {
+    font-size: var(--fs-body); line-height: 20px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.exam-card-state { margin-top: 4px; }
+.exam-card-go { display: grid; color: var(--ink-3); }
+
+/* ---------- Start page ---------- */
+.start-wrap { display: grid; place-items: start center; }
+.start-card { width: 100%; max-width: 620px; padding: 24px 26px; }
+.start-card h1 { font-size: var(--fs-title); margin: 4px 0 2px; }
+.result-card { max-width: 860px; }
+.facts { list-style: none; padding: 0; margin: 16px 0; display: grid; gap: 8px; }
+.facts li { display: flex; gap: 10px; align-items: center; font-size: var(--fs-body); }
+.facts li > span { flex: none; width: 34px; height: 34px; display: grid; place-items: center; background: var(--blue-soft); color: var(--blue-dark); border-radius: 10px; }
+.page .code-input { font-size: var(--fs-stat); letter-spacing: .15em; text-align: center; }
+.instructions { background: var(--amber-soft); border: 1px solid #f6dfa4; border-radius: 12px; padding: 12px 14px; margin: 14px 0; }
+
+/* ---------- Player shell ---------- */
+body.player-body { overflow: hidden; background: #eef2f8; }
+body.player-body > .page-bare { max-width: none; padding: 0; margin: 0; }
+.player { height: 100vh; height: 100dvh; display: grid; grid-template-rows: 56px minmax(0, 1fr) 68px; grid-template-columns: minmax(0, 1fr); }
+.p-top {
+    display: flex; align-items: center; gap: 12px; padding: 0 16px;
+    background: #fff; border-bottom: 1px solid var(--line); min-width: 0;
+}
+.p-title { display: flex; flex-direction: column; min-width: 0; flex: 1; line-height: 1.2; }
+.p-title strong { font-size: 1rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.p-subject { font-size: .74rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .06em; }
+.p-preview { flex: none; }   /* a teacher's preview (teacher/preview.php) */
+.p-section { font-size: .85rem; color: var(--ink-2); background: var(--bg); padding: 4px 10px; border-radius: 999px; white-space: nowrap; max-width: 220px; overflow: hidden; text-overflow: ellipsis; }
+.p-section:empty { display: none; }
+.p-timer {
+    display: inline-flex; align-items: center; gap: 2px;
+    font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.05rem;
+    padding: 6px 12px; border-radius: 999px; background: var(--blue-soft); color: var(--blue-dark); white-space: nowrap;
+}
+.p-timer.warn { background: var(--amber-soft); color: #7a4a00; }
+.p-timer.danger { background: var(--red-soft); color: var(--red); animation: pulse 1s infinite; }
+.p-timer.paused { background: var(--bg); color: var(--ink-3); animation: none; }   /* connection lost: time stands still */
+.p-sync { display: flex; align-items: center; gap: 7px; font-size: .85rem; color: var(--ink-2); white-space: nowrap; min-width: 92px; }
+.p-sync .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green); }
+.p-sync[data-state=saving] .dot { background: var(--blue); animation: pulse .9s infinite; }
+.p-sync[data-state=offline] { color: #9a4d00; font-weight: 600; }
+.p-sync[data-state=offline] .dot { background: var(--orange); }
+.p-sync[data-state=error] { color: var(--red); font-weight: 600; }
+.p-sync[data-state=error] .dot { background: var(--red); }
+@keyframes pulse { 50% { opacity: .45; } }
+
+.p-main { overflow-y: auto; padding: 18px 16px 24px; scroll-behavior: smooth; outline: none; }
+.p-bottom {
+    display: flex; align-items: center; gap: 12px; padding: 0 16px;
+    background: #fff; border-top: 1px solid var(--line);
+}
+.p-bottom .btn-lg { min-width: 120px; }
+.p-dots { flex: 1; min-width: 0; display: flex; gap: 6px; overflow-x: auto; padding: 6px 2px; scrollbar-width: thin; justify-content: safe center; }
+.p-dot {
+    flex: 0 0 34px; height: 34px; border-radius: 50%; border: 2px solid #c9d2df; background: #fff;
+    font: inherit; font-size: .85rem; font-weight: 600; color: var(--ink-2); cursor: pointer; position: relative;
+}
+.p-dot.answered { background: var(--blue); border-color: var(--blue); color: #fff; }
+.p-dot.current { box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--orange); }
+.p-dot.flagged::after {
+    content: ""; position: absolute; top: -3px; right: -3px; width: 11px; height: 11px;
+    border-radius: 50%; background: var(--orange); border: 2px solid #fff;
+}
+/* Questions the student chooses from ("answer any five") are amber and dashed, never plain */
+.p-group {
+    flex: 0 0 auto; align-self: center; background: var(--amber-soft); border: 1px dashed #dcae4e;
+    color: #7a4a00; border-radius: 999px; padding: 3px 10px; font-size: .74rem; font-weight: 700; white-space: nowrap;
+}
+.p-dot.optional { border-style: dashed; border-color: #dcae4e; color: #7a4a00; }
+.p-dot.optional.answered { background: var(--blue); border-color: var(--blue); border-style: solid; color: #fff; }
+.p-dot.extra { background: #fffdf7; color: #b58d4a; }
+
+/* ---------- "Answer any five": the choice must be impossible to miss ---------- */
+.q-card-choice { border-color: #f3d9a4; box-shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 6px 20px rgba(176, 96, 0, .10); }
+.q-choose {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 16px; padding: 12px 16px;
+    background: var(--amber-soft); border: 2px solid #f0cf7a; border-radius: 14px; color: #7a4a00;
+}
+.q-choose-icon { display: flex; color: var(--amber); }
+.q-choose-text { display: flex; flex-direction: column; gap: 2px; }
+.q-choose strong { font-size: 1.05rem; }
+.q-choose-sub { font-size: .92rem; }
+.q-choose.ok { background: var(--green-soft); border-color: #a8d5b5; color: #17612c; }
+.q-choose.ok .q-choose-icon { color: var(--green); }
+.q-choose.extra { background: #fffdf7; border-style: dashed; }
+.q-extra-chip {
+    margin-left: auto; background: var(--amber); color: #fff; border-radius: 999px;
+    padding: 4px 12px; font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+}
+.q-section-head .q-choose-chip {
+    margin-left: 10px; background: var(--amber-soft); border: 2px solid #f0cf7a; color: #7a4a00;
+    border-radius: 999px; padding: 2px 12px; font-size: .82rem; font-weight: 700; white-space: nowrap;
+}
+
+/* ---------- Question card ---------- */
+.q-card {
+    max-width: 940px; margin: 0 auto 18px; background: #fff; border-radius: 18px;
+    box-shadow: 0 1px 2px rgba(16, 24, 40, .05), 0 6px 20px rgba(16, 24, 40, .06);
+    padding: 20px 26px 24px; border: 1px solid #e3e8f0;
+}
+.q-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.q-num { font-weight: 800; color: var(--blue-dark); font-size: .95rem; letter-spacing: .02em; }
+.q-marks { font-size: .78rem; color: var(--ink-3); background: var(--bg); padding: 2px 9px; border-radius: 999px; }
+.q-tools { margin-left: auto; display: flex; gap: 6px; }
+.q-tool {
+    display: inline-flex; align-items: center; gap: 4px;
+    border: 1px solid var(--line); background: #fff; border-radius: 10px; padding: 5px 10px;
+    font: inherit; font-size: .88rem; cursor: pointer; color: var(--ink-2);
+}
+.q-tool:hover { background: var(--bg); }
+.q-tool[aria-pressed=true] { background: var(--orange-soft); border-color: #ffd699; color: #9a4d00; }
+.q-text { font-size: 1.16rem; line-height: 1.65; margin-bottom: 16px; overflow-wrap: anywhere; }
+/* A question sets its own width (in the .gift file); the height is the screen's business.
+   45vh keeps the answer box in sight without scrolling down to it: the question area is
+   the viewport less the two bars (124px), and the rest of a card is about 180px, so this
+   holds for any viewport over ~610px tall -- a 1024x768 lab PC even with a bookmarks bar. */
+.q-text img { max-width: 100%; max-height: min(560px, 45vh); border-radius: 8px; }
+.q-text svg { max-width: 100%; height: auto; vertical-align: middle; }
+.q-text table { border-collapse: collapse; margin: 6px 0; }
+.q-text td, .q-text th { border: 1px solid var(--line); padding: 4px 8px; }
+.q-hint { font-size: .88rem; color: var(--ink-3); margin: -6px 0 10px; }
+.q-report { background: var(--amber-soft); border: 1px solid #f6dfa4; border-radius: 12px; padding: 10px; margin: -4px 0 12px; display: flex; gap: 8px; align-items: flex-end; }
+.q-report[hidden] { display: none; }
+.q-report textarea { min-height: 52px; flex: 1; }
+.q-check { margin-top: 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.q-check-result { padding: 8px 14px; border-radius: 12px; font-size: 1.02rem; }
+.q-check-result[hidden] { display: none; }
+.q-check-result.ok { background: var(--green-soft); color: #13692e; }
+.q-check-result.part { background: var(--amber-soft); color: #7a4a00; }
+.q-check-result.no { background: var(--red-soft); color: #a50e0e; }
+.q-match .q-match-row select.pair-right { border-color: var(--green); background: var(--green-soft); }
+.q-match .q-match-row select.pair-wrong { border-color: var(--red); background: var(--red-soft); }
+
+/* Choices */
+.q-choices { display: grid; gap: 10px; grid-template-columns: 1fr; }
+.q-choices.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* Picture choices: letter on the left, picture centred */
+.q-choices.pics:not(.two) { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+.q-choices.pics .choice { padding: 8px 10px; }
+.q-choices.pics .choice .choice-html { display: grid; place-items: center; min-height: 70px; }
+.q-choices.pics .choice .choice-html svg, .q-choices.pics .choice .choice-html img { max-height: 90px; max-width: 100%; }
+@media (max-width: 700px) { .q-choices.two { grid-template-columns: 1fr; } }
+.choice {
+    display: flex; align-items: center; gap: 12px; width: 100%; text-align: left;
+    padding: 12px 14px; min-height: 56px; border: 2px solid #d8e0ea; border-radius: 14px;
+    background: #fff; font: inherit; font-size: 1.06rem; color: var(--ink); cursor: pointer;
+    transition: border-color .12s, background .12s, box-shadow .12s;
+}
+.choice:hover { border-color: #9fbfe0; background: #f7fbff; }
+.choice:focus-visible { outline: none; box-shadow: 0 0 0 4px rgba(20, 110, 180, .25); }
+.choice .letter {
+    flex: 0 0 34px; height: 34px; border-radius: 10px; display: grid; place-items: center;
+    background: var(--bg); color: var(--ink-2); font-weight: 800; font-size: .92rem;
+}
+.choice .choice-html { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.choice .choice-html svg { max-height: 120px; width: auto; }
+.choice.selected { border-color: var(--blue); background: var(--blue-soft); }
+.choice.selected .letter { background: var(--blue); color: #fff; }
+.choice.multi .letter { border-radius: 8px; }
+.q-tf { display: flex; gap: 14px; flex-wrap: wrap; }
+.q-tf .choice { flex: 1; min-width: 180px; justify-content: center; font-size: 1.2rem; font-weight: 700; min-height: 68px; }
+.q-tf .choice .choice-html { flex: none; }   /* True / False have no letter: the word sits in the middle */
+
+/* Typed answers */
+.q-input {
+    font: inherit; font-size: 1.15rem; padding: 10px 14px; width: 100%; max-width: 440px;
+    border: 2px solid #cfd8e3; border-radius: 12px; background: #fff;
+}
+.q-input:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px rgba(20, 110, 180, .18); }
+/* .q-text in front: stronger than app.css's input[type=text] */
+.q-text .q-inline {
+    font: inherit; font-size: 1.05rem; width: 9.5em; max-width: calc(100% - 8px); min-height: 0; line-height: 1.4;
+    padding: 2px 8px; margin: 0 4px; color: var(--ink);
+    border: 0; border-bottom: 3px solid var(--blue); background: var(--blue-soft); border-radius: 6px 6px 0 0;
+}
+.q-text .q-inline.num { width: 6.5em; }
+.q-text .q-inline:focus { outline: none; box-shadow: none; background: #d6e8f8; }
+.q-text select.q-inline { width: auto; min-width: 7em; padding: 3px 6px; }
+/* A blank wraps together with the word before it and the punctuation after it */
+.q-glue { white-space: nowrap; }
+/* Written answers: toolbar, the box the student types in, word count */
+.q-written { display: flex; flex-direction: column; }
+.q-essay {
+    width: 100%; min-height: 170px; max-height: 60vh; overflow: auto; font: inherit; font-size: 1.05rem;
+    line-height: 1.55; padding: 12px 14px; background: #fff;
+    border: 2px solid #cfd8e3; border-top: 0; border-radius: 0 0 12px 12px;
+}
+.q-essay:focus { outline: none; border-color: var(--blue); }
+.q-essay p, .q-essay h3, .q-essay h4, .q-essay ul, .q-essay ol { margin: 0 0 .5em; }
+.q-essay h3 { font-size: 1.2rem; }
+.q-essay h4 { font-size: 1.08rem; }
+.q-essay ul, .q-essay ol { padding-left: 1.5em; }
+.q-essay > :last-child { margin-bottom: 0; }
+.q-count { font-size: .82rem; color: var(--ink-3); text-align: right; padding-top: 4px; }
+.q-count.full { color: var(--orange); font-weight: 600; }
+
+/* The toolbar is groups of buttons, each with its name under it; a group wraps whole, never split.
+   Buttons stay 34 px, the control height of every other button in the app (lab PCs with a mouse). */
+.q-fmt {
+    display: flex; flex-wrap: wrap; align-items: flex-start; gap: 7px 6px;
+    padding: 7px 9px; background: var(--bg); border: 2px solid #cfd8e3; border-radius: 12px 12px 0 0;
+}
+.q-fmt-group { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.q-fmt-row { display: flex; align-items: center; gap: 3px; }
+.q-fmt-name { font-size: .62rem; letter-spacing: .05em; text-transform: uppercase; color: var(--ink-3); }
+.q-fmt-btn {
+    min-width: 32px; height: 34px; padding: 0 6px; font: inherit; font-size: .95rem; line-height: 1;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: #fff; color: var(--ink); border: 1px solid var(--line); border-radius: 9px; cursor: pointer;
+}
+.q-fmt-btn:hover { border-color: #9fbfe0; background: #f7fbff; }
+.q-fmt-btn.on { background: var(--blue-soft); border-color: var(--blue); color: var(--blue-dark); }
+.q-fmt-btn:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(20, 110, 180, .25); }
+.q-fmt-btn:disabled { background: var(--bg); color: #9aa4b2; border-color: #e9edf3; cursor: not-allowed; }
+.q-fmt-btn .ic { vertical-align: 0; }
+.q-fmt-x { font-size: .68rem; font-weight: 600; }
+.q-fmt-sep { width: 1px; height: 34px; background: #dbe1ea; margin: 0 3px; }
+.q-fmt-size { font: inherit; font-size: .92rem; height: 34px; min-height: 0; padding: 0 6px; width: auto; border: 1px solid var(--line); border-radius: 9px; background: #fff; }
+
+/* A colour button in two halves: the letter uses the colour on its bar, the arrow opens the colours.
+   The letter itself stays black -- a red "A" reads as "red", not as "choose a colour". */
+.q-fmt-pick { position: relative; display: inline-flex; }
+.q-fmt-stack { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.q-fmt-a { font-size: .92rem; font-weight: 700; line-height: 1; }
+.q-fmt-bar { width: 17px; height: 4px; border-radius: 2px; }
+.q-fmt-main { border-radius: 9px 0 0 9px; padding: 0 5px; }
+.q-fmt-caret-btn { min-width: 20px; padding: 0 4px; border-left: 0; border-radius: 0 9px 9px 0; }
+.q-fmt-caret { stroke-width: 3; }
+.q-fmt-menu {
+    position: absolute; top: 38px; left: 0; z-index: 5; display: flex; gap: 4px;
+    padding: 6px; background: #fff; border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow-lg);
+}
+.q-swatch { width: 28px; height: 28px; border: 1px solid #b6c2d2; border-radius: 7px; cursor: pointer; padding: 0; }
+.q-swatch.on { box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--blue); }
+.q-swatch.none { background: #fff; color: var(--ink-3); font-size: .8rem; }
+
+/* What the toolbar makes. The same classes print on the answer sheet (assets/css/sheets.css). */
+.q-essay .c-blue { color: #146EB4; }
+.q-essay .c-red { color: #C42B1C; }
+.q-essay .c-green { color: #1B7A36; }
+.q-essay .c-purple { color: #6B2FA0; }
+.q-essay .c-brown { color: #8A5A00; }
+.q-essay .hl-yellow { background: #FFF3A3; }
+.q-essay .hl-green { background: #CDF2D5; }
+.q-essay .hl-blue { background: #D6E9FB; }
+.q-essay .hl-pink { background: #FBD7E4; }
+.q-essay .al-center { text-align: center; }
+.q-essay .al-right { text-align: right; }
+.q-essay .in-1 { margin-left: 2em; }
+.q-essay .in-2 { margin-left: 4em; }
+.q-essay .in-3 { margin-left: 6em; }
+
+/* Matching: each column is as wide as its longest text. A drop-down can't wrap, so when both
+   don't fit, the drop-downs keep their width and the left side wraps. */
+.q-match { display: grid; gap: 4px; grid-template-columns: minmax(8em, max-content) auto max-content; justify-content: start; }
+.q-match-row {
+    grid-column: 1 / -1; display: grid; grid-template-columns: subgrid; gap: 12px; align-items: center;
+    padding: 3px 12px; border: 1px solid #e3e8f0; border-radius: 12px; background: #fbfcfe;
+}
+@supports not (grid-template-columns: subgrid) {
+    .q-match-row { grid-template-columns: minmax(0, 1fr) auto minmax(180px, 2fr); }
+}
+.q-match-row .arrow { color: var(--ink-3); }
+.q-match-row select { font: inherit; font-size: 1rem; padding: 6px 10px; min-height: 0; border: 2px solid #cfd8e3; border-radius: 10px; width: auto; min-width: 100%; max-width: 100%; }
+.q-match-row select.chosen { border-color: var(--blue); background: var(--blue-soft); }
+.q-match-row .stem svg { max-height: 90px; width: auto; }
+/* Picture stems: tiles with the drop-down under each picture */
+.q-match.pics { grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); }
+.q-match.pics .q-match-row { grid-column: auto; grid-template-columns: 1fr; justify-items: center; gap: 8px; padding: 10px; }
+.q-match.pics .q-match-row .arrow { display: none; }
+.q-match.pics .q-match-row .stem svg, .q-match.pics .q-match-row .stem img { max-height: 84px; }
+
+/* Locked after time up */
+.player.locked .p-main { pointer-events: none; opacity: .75; }
+
+/* ---------- Overlay (finish, time up, other computer) ---------- */
+.p-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, .55); display: grid; place-items: center; z-index: 50; padding: 16px; }
+.p-overlay[hidden] { display: none; }
+.p-overlay-card {
+    background: #fff; border-radius: 20px; padding: 24px 26px; width: 100%; max-width: 640px;
+    max-height: calc(100vh - 32px); overflow: auto; box-shadow: var(--shadow-lg);
+}
+.p-overlay-card h2 { font-size: 1.4rem; }
+.p-overlay-card .big-icon { display: block; margin-bottom: 4px; color: var(--blue); }
+.review-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap: 8px; margin: 14px 0; }
+.review-tile {
+    height: 46px; border-radius: 12px; border: 2px solid #c9d2df; background: #fff; font: inherit; font-weight: 700;
+    cursor: pointer; position: relative; color: var(--ink-2);
+}
+.review-tile.answered { background: var(--blue-soft); border-color: #9fc3e6; color: var(--blue-dark); }
+.review-tile.unanswered { background: var(--amber-soft); border-color: #f0cf7a; color: #7a4a00; }
+.review-tile.flagged::after { content: "⚑"; position: absolute; top: -8px; right: -4px; font-size: .9rem; color: var(--orange); }
+.review-legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: .86rem; color: var(--ink-2); }
+.review-legend span::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 4px; margin-right: 5px; vertical-align: -1px; }
+.review-legend .l-ans::before { background: var(--blue-soft); border: 2px solid #9fc3e6; }
+.review-legend .l-unanswered::before { background: var(--amber-soft); border: 2px solid #f0cf7a; }
+.review-legend .l-extra::before { background: #fff; border: 2px dashed #dcae4e; }
+.review-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 16px; font-size: .95rem; color: var(--ink-2); }
+.review-group.choice, .review-group.ok { background: var(--amber-soft); border: 2px solid #f0cf7a; border-radius: 12px; padding: 8px 12px; color: #7a4a00; }
+.review-group.ok { background: var(--green-soft); border-color: #a8d5b5; color: #17612c; }
+.review-group + .review-grid { margin-top: 8px; }
+.review-tile.extra { background: #fff; border-style: dashed; border-color: #dcae4e; color: #a97b30; }
+.overlay-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; margin-top: 16px; }
+
+/* ---------- Worksheet mode (all questions on one page) ---------- */
+.player.worksheet .q-card { margin-bottom: 14px; }
+.player.worksheet #p-prev, .player.worksheet #p-next { display: none; }
+
+/* ---------- Results ---------- */
+.result-hero { text-align: center; padding: 26px 18px; }
+.result-score { display: flex; justify-content: center; font-size: 3.4rem; font-weight: 800; line-height: 1; color: var(--blue-dark); }
+.result-score small { align-self: flex-end; }
+.result-band.with-icon { display: flex; justify-content: center; }
+.result-score small { font-size: 1.2rem; color: var(--ink-3); font-weight: 600; }
+.result-band { font-size: 1.25rem; margin-top: 8px; }
+.result-list .qrow-head .mark { font-variant-numeric: tabular-nums; font-weight: 700; }
+.mark.full { color: var(--green); }
+.mark.part { color: var(--amber); }
+.mark.zero { color: var(--red); }
+.mark.extra { color: var(--ink-3); font-weight: 600; white-space: nowrap; }
+.qrow.q-extra { opacity: .72; }
+.choice-note {
+    display: flex; align-items: center; gap: 8px; margin: 12px 0 6px; padding: 8px 12px;
+    background: var(--amber-soft); border: 1px solid #f0cf7a; border-radius: 12px; color: #7a4a00; font-size: .92rem;
+}
+.your-answer { background: var(--bg); border-radius: 10px; padding: 8px 12px; margin: 6px 0; white-space: pre-wrap; }
+/* A written answer brings its own paragraphs and lists, so it is not pre-wrapped text */
+.your-answer .written { white-space: normal; }
+
+@media (max-width: 760px) {
+    .p-title .p-subject, .p-section { display: none; }
+    .p-exit .btn-label { display: none; }
+    .p-bottom .btn-lg { min-width: 0; padding: 10px 12px; }
+    .q-card { padding: 16px; }
+    .q-match { grid-template-columns: minmax(0, 1fr); }
+    .q-match-row { grid-template-columns: 1fr; }
+    .q-match-row .arrow { display: none; }
+    /* On a narrow screen the column is the limit, whatever width the question asked for. */
+    .q-text img { max-width: 100% !important; }
+}
+
+/* Short progress bar in a table cell */
+.progress-short { width: 90px; }

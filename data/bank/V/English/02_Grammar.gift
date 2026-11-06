@@ -1,0 +1,55 @@
+$CATEGORY: V/English/02_Grammar
+
+// === Choose ===
+
+::Noun::Which word is a noun?{
+	~quickly
+	=river
+	~beautiful
+	~run
+}
+
+::Past tense of go::Yesterday we ___ to the zoo.{
+	~go
+	~goes
+	=went
+	~going
+}
+
+::Opposite::Pick the word opposite in meaning to "ancient".{
+	=modern
+	~old
+	~antique
+	~huge
+}
+
+// === Fill in the blanks ===
+
+// [tag:Fill up]
+::Plural of child::One child, many {=children}.
+
+// [tag:Fill up]
+::Articles::She ate {=an ~a ~the} apple and {=a ~an} banana.
+
+// === Match ===
+
+::Animal sounds::Match the animal with its sound{
+	=cat -> mews
+	=dog -> barks
+	=lion -> roars
+	=duck -> quacks
+}
+
+// === Write ===
+
+// [zion:mark=4]
+// [key:Mentions the day, at least three things that happened, past tense, full sentences]
+::Holiday::Write five sentences about your last holiday.{}
+
+// [zion:mark=4]
+// [key:Describes looks and habits of a pet, why the student likes it]
+::Pet::Describe your favourite pet in five sentences.{}
+
+// [zion:mark=4]
+// [key:Names the person, how they help, why the student admires them]
+::Helper::Write about a person in your neighbourhood who helps others.{}

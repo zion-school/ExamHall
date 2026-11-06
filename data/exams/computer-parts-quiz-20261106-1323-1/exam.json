@@ -1,0 +1,82 @@
+{
+    "id": "computer-parts-quiz-20261106-1323-1",
+    "title": "Computer Parts Quiz",
+    "subject": "Computer Science",
+    "classes": [
+        "4"
+    ],
+    "users": [],
+    "instructions": "",
+    "status": "published",
+    "hidden": false,
+    "open_at": "",
+    "close_at": "",
+    "time_limit_min": 0,
+    "attempts": 0,
+    "grade_method": "highest",
+    "per_page": 1,
+    "shuffle_questions": true,
+    "shuffle_choices": true,
+    "review": "score",
+    "bands": [],
+    "access_code": "",
+    "grading": {
+        "llm": "off",
+        "fuzzy": true,
+        "spelling_penalty": 0,
+        "ignore_case": true,
+        "ignore_spaces": true,
+        "ignore_punctuation": true
+    },
+    "reward": {
+        "enabled": true,
+        "formula": "percent >= 90 ? 10 : percent >= 75 ? 5 : percent >= 50 ? 2 : 0",
+        "max": 10,
+        "daily_max": 0,
+        "payout": "by_question_types",
+        "count": "best"
+    },
+    "sections": [
+        {
+            "title": "",
+            "shuffle": true,
+            "choose": 0,
+            "items": [
+                {
+                    "q": "q5163eb4826",
+                    "mark": 1
+                },
+                {
+                    "q": "qa668a9e1fb",
+                    "mark": 1
+                },
+                {
+                    "q": "qd08c7da415",
+                    "mark": 1
+                },
+                {
+                    "q": "qf8fbd2b31e",
+                    "mark": 1
+                },
+                {
+                    "q": "q43e1326948",
+                    "mark": 1
+                },
+                {
+                    "q": "qa9abbe5465",
+                    "mark": 1
+                },
+                {
+                    "q": "q51c8b25a58",
+                    "mark": 1
+                }
+            ]
+        }
+    ],
+    "created": "2026-11-06T13:23:34+05:30",
+    "created_by": "t_tobin",
+    "modified": "2026-11-06T13:23:34+05:30",
+    "modified_by": "t_tobin",
+    "published": "2026-11-06T13:23:34+05:30",
+    "reopened": ""
+}

@@ -1,0 +1,68 @@
+/*
+ * Copyright (c) 2026 Zion Nursery & Primary School, Kovaipudur
+ * SPDX-License-Identifier: MIT
+ * Date: 30-Oct-2026
+ *
+ * The WAP exams' dialogs: a message from the server, and the question
+ * before something that can't be undone (submitting a try). When the
+ * student agrees, it goes to a card of the same deck that posts the form
+ * on entry (post_card() in lib/wml.php).
+ */
+
+// Shows the message in variable "m": a card's timer runs it when a page
+// has something to tell (wml_start() in lib/wml.php)
+extern function show(id) {
+    // Each message once: the timer starts again when Back returns to the card
+    if (WMLBrowser.getVar("mid") == id) {
+        return;
+    }
+    WMLBrowser.setVar("mid", id);
+    Dialogs.alert(WMLBrowser.getVar("m"));
+    WMLBrowser.setVar("m", "");
+}
+
+// Asks the question in variable "m", then posts with card
+extern function ask(ok, card) {
+    var m = WMLBrowser.getVar("m");
+    WMLBrowser.setVar("m", "");
+    if (Dialogs.confirm(m, ok, "Cancel")) {
+        WMLBrowser.go("#" + card);
+    }
+}
+
+// The exam code in "code", then starts the exam with card
+extern function code(card) {
+    if (String.trim(WMLBrowser.getVar("code")) == "") {
+        Dialogs.alert("Enter the exam code from your teacher");
+        return;
+    }
+    WMLBrowser.go("#" + card);
+}
+
+// A number in "a0", or nothing yet, then leaves the question ("to": next,
+// prev, ...) with card, which saves it
+extern function num(to, card) {
+    var a = String.trim(WMLBrowser.getVar("a0"));
+    if (a != "" && !Lang.isFloat(a)) {
+        Dialogs.alert("Enter a number, like 8 or 2.5");
+        return;
+    }
+    WMLBrowser.setVar("to", to);
+    WMLBrowser.go("#" + card);
+}
+
+// Asks for a question number, 1 to max, then goes there with card, which
+// saves the answer on the screen first
+extern function goq(max, card) {
+    var n = String.trim(Dialogs.prompt("Go to question (1-" + max + ")", ""));
+    if (n == "") {
+        return;
+    }
+    if (!Lang.isInt(n) || Lang.parseInt(n) < 1 || Lang.parseInt(n) > max) {
+        Dialogs.alert("Enter a question number, 1 to " + max);
+        return;
+    }
+    WMLBrowser.setVar("gq", n);
+    WMLBrowser.setVar("to", "goto");
+    WMLBrowser.go("#" + card);
+}

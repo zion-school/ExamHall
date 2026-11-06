@@ -1,0 +1,99 @@
+{
+    "id": "fractions-unit-test-20261106-1323-1",
+    "title": "Fractions Unit Test",
+    "subject": "Maths",
+    "classes": [
+        "5"
+    ],
+    "users": [],
+    "instructions": "",
+    "status": "published",
+    "hidden": false,
+    "open_at": "",
+    "close_at": "",
+    "time_limit_min": 20,
+    "attempts": 1,
+    "grade_method": "highest",
+    "per_page": 1,
+    "shuffle_questions": true,
+    "shuffle_choices": true,
+    "review": "score",
+    "bands": [
+        {
+            "min": 90,
+            "text": "Excellent!"
+        },
+        {
+            "min": 60,
+            "text": "Good work"
+        },
+        {
+            "min": 0,
+            "text": "Keep practising"
+        }
+    ],
+    "access_code": "",
+    "grading": {
+        "llm": "off",
+        "fuzzy": true,
+        "spelling_penalty": 0,
+        "ignore_case": true,
+        "ignore_spaces": true,
+        "ignore_punctuation": true
+    },
+    "reward": {
+        "enabled": false,
+        "formula": "percent >= 90 ? 10 : percent >= 75 ? 5 : percent >= 50 ? 2 : 0",
+        "max": 10,
+        "daily_max": 0,
+        "payout": "by_question_types",
+        "count": "best"
+    },
+    "sections": [
+        {
+            "title": "",
+            "shuffle": true,
+            "choose": 0,
+            "items": [
+                {
+                    "q": "q4f49cffd94",
+                    "mark": 1
+                },
+                {
+                    "q": "qec504c5245",
+                    "mark": 1
+                },
+                {
+                    "q": "qfb9c9699c8",
+                    "mark": 1
+                },
+                {
+                    "q": "q8081f8e41e",
+                    "mark": 1
+                },
+                {
+                    "q": "qcaeee241cc",
+                    "mark": 1
+                },
+                {
+                    "q": "qde1035c108",
+                    "mark": 1
+                },
+                {
+                    "q": "qbf3453c851",
+                    "mark": 2
+                },
+                {
+                    "q": "q0a0c9fccae",
+                    "mark": 1
+                }
+            ]
+        }
+    ],
+    "created": "2026-11-06T13:23:34+05:30",
+    "created_by": "t_tobin",
+    "modified": "2026-11-06T13:23:34+05:30",
+    "modified_by": "t_tobin",
+    "published": "2026-11-06T13:23:34+05:30",
+    "reopened": ""
+}

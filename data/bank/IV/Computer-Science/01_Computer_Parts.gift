@@ -1,0 +1,44 @@
+$CATEGORY: IV/Computer-Science/01_Computer_Parts
+
+// === Choose ===
+
+::Monitor::Identify this part of a computer.<br><img src\="media/monitor.svg" alt\="" width\="160">{
+	=Monitor
+	~Keyboard
+	~Mouse
+	~Printer
+}
+
+::Brain::Which part is called the brain of the computer?{
+	=CPU
+	~Monitor
+	~Speaker
+	~Mouse
+}
+
+::Input devices::Which of these are input devices? (Choose all that apply){
+	~%50%Keyboard
+	~%50%Mouse
+	~%-100%Printer
+	~%-100%Speaker
+}
+
+// === True or false ===
+
+::Speakers::Speakers are used to hear sound.{T}
+
+::Mouse typing::We type letters with the mouse.{F}
+
+// === Name it ===
+
+// [tag:One word]
+::Printer::The device that prints on paper is the {=printer}.
+
+// === Match ===
+
+::Devices and uses::Match the device with its use{
+	=Keyboard -> Typing
+	=Mouse -> Pointing and clicking
+	=Monitor -> Showing pictures and text
+	=Speaker -> Playing sound
+}

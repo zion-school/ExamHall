@@ -1,0 +1,230 @@
+{
+    "exam": "english-term-test-20261106-1323-1",
+    "user": "belo",
+    "n": 1,
+    "status": "submitted",
+    "token": "ibqkebs6l2lnvwanxmro7yo3m25o2w5g",
+    "epoch": 1,
+    "seq": 14,
+    "started": "2026-11-05T10:08:09+05:30",
+    "deadline": null,
+    "submitted": "2026-11-05T10:37:06+05:30",
+    "late": false,
+    "auto_submitted": false,
+    "seed": 609421499,
+    "unlock": null,
+    "slots": [
+        {
+            "slot": 1,
+            "section": 0,
+            "key": "q4c32cbdf5d",
+            "mark": 1,
+            "layout": {
+                "choices": [
+                    0,
+                    2,
+                    3,
+                    1
+                ]
+            }
+        },
+        {
+            "slot": 2,
+            "section": 0,
+            "key": "qa0e25142ba",
+            "mark": 1,
+            "layout": {
+                "choices": [
+                    3,
+                    0,
+                    1,
+                    2
+                ]
+            }
+        },
+        {
+            "slot": 3,
+            "section": 0,
+            "key": "qafeea3c6db",
+            "mark": 1,
+            "layout": {
+                "choices": [
+                    0,
+                    2,
+                    3,
+                    1
+                ]
+            }
+        },
+        {
+            "slot": 4,
+            "section": 0,
+            "key": "qe4294cc849",
+            "mark": 1,
+            "layout": []
+        },
+        {
+            "slot": 5,
+            "section": 0,
+            "key": "q8570b35da5",
+            "mark": 2,
+            "layout": {
+                "blanks": [
+                    {
+                        "choices": [
+                            0,
+                            1,
+                            2
+                        ]
+                    },
+                    {
+                        "choices": [
+                            0,
+                            1
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "slot": 6,
+            "section": 0,
+            "key": "qa260a8363b",
+            "mark": 1,
+            "layout": {
+                "stems": [
+                    3,
+                    1,
+                    2,
+                    0
+                ],
+                "choices": [
+                    3,
+                    0,
+                    2,
+                    1
+                ]
+            }
+        },
+        {
+            "slot": 7,
+            "section": 1,
+            "key": "q488f0c1e26",
+            "mark": 4,
+            "layout": []
+        },
+        {
+            "slot": 8,
+            "section": 1,
+            "key": "qa66b8c6859",
+            "mark": 4,
+            "layout": []
+        },
+        {
+            "slot": 9,
+            "section": 1,
+            "key": "q25daebd8f0",
+            "mark": 4,
+            "layout": []
+        }
+    ],
+    "choose": {
+        "1": 2
+    },
+    "answers": {
+        "1": 3,
+        "2": 2,
+        "3": 0,
+        "4": "children",
+        "5": [
+            1,
+            0
+        ],
+        "6": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "7": "<p>My holiday was in my grandmother's village. I played in the fields with my cousins. We plucked mangoes from the tree. In the evening we sat near the pond. I was sad when we came back.</p>",
+        "9": "<p>Mr. Merrow is our postman. He brings letters to every house, even in the rain. He knows everyone's name. He helped my grandfather fill a form. I admire him because he is always kind.</p>"
+    },
+    "flags": [],
+    "grades": {
+        "1": {
+            "fraction": 0,
+            "state": "graded",
+            "mark": 0,
+            "by": "auto"
+        },
+        "2": {
+            "fraction": 1,
+            "state": "graded",
+            "mark": 1,
+            "by": "auto"
+        },
+        "3": {
+            "fraction": 1,
+            "state": "graded",
+            "mark": 1,
+            "by": "auto"
+        },
+        "4": {
+            "fraction": 1,
+            "state": "graded",
+            "matched": "children",
+            "mark": 1,
+            "by": "auto"
+        },
+        "5": {
+            "fraction": 0.5,
+            "state": "graded",
+            "blanks": [
+                0,
+                1
+            ],
+            "mark": 1,
+            "by": "auto",
+            "blank_info": []
+        },
+        "6": {
+            "fraction": 1,
+            "state": "graded",
+            "mark": 1,
+            "by": "auto"
+        },
+        "7": {
+            "fraction": null,
+            "state": "needs_review",
+            "mark": null,
+            "by": "auto"
+        },
+        "8": {
+            "fraction": 0,
+            "state": "unanswered",
+            "mark": 0,
+            "by": "auto"
+        },
+        "9": {
+            "fraction": null,
+            "state": "needs_review",
+            "mark": null,
+            "by": "auto"
+        }
+    },
+    "score": 5,
+    "max": 15,
+    "events": {
+        "saves": 14,
+        "blur": 1,
+        "offline_ms": 0
+    },
+    "saved_at": "2026-11-05T10:37:06+05:30",
+    "last_seen": "2026-11-05T10:37:06+05:30",
+    "paused_sec": 0,
+    "pauses": 0,
+    "student": {
+        "name": "Belo Marrin",
+        "class": "5"
+    }
+}

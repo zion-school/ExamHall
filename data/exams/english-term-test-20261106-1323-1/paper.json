@@ -1,0 +1,310 @@
+{
+    "exam": "english-term-test-20261106-1323-1",
+    "published": "2026-11-06T13:23:34+05:30",
+    "max_marks": 15,
+    "questions": {
+        "q4c32cbdf5d": {
+            "type": "multichoice",
+            "name": "Noun",
+            "text": "Which word is a noun?",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "single": true,
+            "shuffle": true,
+            "answers": [
+                {
+                    "text": "quickly",
+                    "fraction": 0
+                },
+                {
+                    "text": "river",
+                    "fraction": 1
+                },
+                {
+                    "text": "beautiful",
+                    "fraction": 0
+                },
+                {
+                    "text": "run",
+                    "fraction": 0
+                }
+            ],
+            "id": "q4c32cbdf5d",
+            "category": "V/English/02_Grammar",
+            "section": "Choose",
+            "number": 1
+        },
+        "qa0e25142ba": {
+            "type": "multichoice",
+            "name": "Past tense of go",
+            "text": "Yesterday we ___ to the zoo.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "single": true,
+            "shuffle": true,
+            "answers": [
+                {
+                    "text": "go",
+                    "fraction": 0
+                },
+                {
+                    "text": "goes",
+                    "fraction": 0
+                },
+                {
+                    "text": "went",
+                    "fraction": 1
+                },
+                {
+                    "text": "going",
+                    "fraction": 0
+                }
+            ],
+            "id": "qa0e25142ba",
+            "category": "V/English/02_Grammar",
+            "section": "Choose",
+            "number": 2
+        },
+        "qafeea3c6db": {
+            "type": "multichoice",
+            "name": "Opposite",
+            "text": "Pick the word opposite in meaning to \"ancient\".",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "single": true,
+            "shuffle": true,
+            "answers": [
+                {
+                    "text": "modern",
+                    "fraction": 1
+                },
+                {
+                    "text": "old",
+                    "fraction": 0
+                },
+                {
+                    "text": "antique",
+                    "fraction": 0
+                },
+                {
+                    "text": "huge",
+                    "fraction": 0
+                }
+            ],
+            "id": "qafeea3c6db",
+            "category": "V/English/02_Grammar",
+            "section": "Choose",
+            "number": 3
+        },
+        "qe4294cc849": {
+            "type": "shortanswer",
+            "name": "Plural of child",
+            "text": "One child, many _____.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": true,
+            "answers": [
+                {
+                    "text": "children",
+                    "fraction": 1
+                }
+            ],
+            "usecase": false,
+            "id": "qe4294cc849",
+            "category": "V/English/02_Grammar",
+            "section": "Fill in the blanks",
+            "number": 1
+        },
+        "q8570b35da5": {
+            "type": "multiblank",
+            "name": "Articles",
+            "text": "She ate {#1} apple and {#2} banana.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 2,
+            "missing_word": false,
+            "blanks": [
+                {
+                    "type": "multichoice",
+                    "single": true,
+                    "shuffle": true,
+                    "answers": [
+                        {
+                            "text": "an",
+                            "fraction": 1
+                        },
+                        {
+                            "text": "a",
+                            "fraction": 0
+                        },
+                        {
+                            "text": "the",
+                            "fraction": 0
+                        }
+                    ]
+                },
+                {
+                    "type": "multichoice",
+                    "single": true,
+                    "shuffle": true,
+                    "answers": [
+                        {
+                            "text": "a",
+                            "fraction": 1
+                        },
+                        {
+                            "text": "an",
+                            "fraction": 0
+                        }
+                    ]
+                }
+            ],
+            "id": "q8570b35da5",
+            "category": "V/English/02_Grammar",
+            "section": "Fill in the blanks",
+            "number": 2
+        },
+        "qa260a8363b": {
+            "type": "match",
+            "name": "Animal sounds",
+            "text": "Match the animal with its sound",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 1,
+            "missing_word": false,
+            "shuffle": true,
+            "pairs": [
+                {
+                    "question": "cat",
+                    "answer": "mews"
+                },
+                {
+                    "question": "dog",
+                    "answer": "barks"
+                },
+                {
+                    "question": "lion",
+                    "answer": "roars"
+                },
+                {
+                    "question": "duck",
+                    "answer": "quacks"
+                }
+            ],
+            "id": "qa260a8363b",
+            "category": "V/English/02_Grammar",
+            "section": "Match",
+            "number": 1
+        },
+        "q488f0c1e26": {
+            "type": "essay",
+            "name": "Holiday",
+            "text": "Write five sentences about your last holiday.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 4,
+            "missing_word": false,
+            "grader_info": "Mentions the day, at least three things that happened, past tense, full sentences",
+            "id": "q488f0c1e26",
+            "category": "V/English/02_Grammar",
+            "section": "Write",
+            "number": 1
+        },
+        "qa66b8c6859": {
+            "type": "essay",
+            "name": "Pet",
+            "text": "Describe your favourite pet in five sentences.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 4,
+            "missing_word": false,
+            "grader_info": "Describes looks and habits of a pet, why the student likes it",
+            "id": "qa66b8c6859",
+            "category": "V/English/02_Grammar",
+            "section": "Write",
+            "number": 2
+        },
+        "q25daebd8f0": {
+            "type": "essay",
+            "name": "Helper",
+            "text": "Write about a person in your neighbourhood who helps others.",
+            "format": "moodle",
+            "general_feedback": "",
+            "default_mark": 4,
+            "missing_word": false,
+            "grader_info": "Names the person, how they help, why the student admires them",
+            "id": "q25daebd8f0",
+            "category": "V/English/02_Grammar",
+            "section": "Write",
+            "number": 3
+        }
+    },
+    "sections": [
+        {
+            "title": "Part A - Grammar",
+            "shuffle": false,
+            "choose": 0,
+            "slots": [
+                {
+                    "kind": "fixed",
+                    "q": "q4c32cbdf5d",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qa0e25142ba",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qafeea3c6db",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qe4294cc849",
+                    "mark": 1
+                },
+                {
+                    "kind": "fixed",
+                    "q": "q8570b35da5",
+                    "mark": 2
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qa260a8363b",
+                    "mark": 1
+                }
+            ]
+        },
+        {
+            "title": "Part B - Writing",
+            "shuffle": false,
+            "choose": 2,
+            "slots": [
+                {
+                    "kind": "fixed",
+                    "q": "q488f0c1e26",
+                    "mark": 4
+                },
+                {
+                    "kind": "fixed",
+                    "q": "qa66b8c6859",
+                    "mark": 4
+                },
+                {
+                    "kind": "fixed",
+                    "q": "q25daebd8f0",
+                    "mark": 4
+                }
+            ]
+        }
+    ]
+}

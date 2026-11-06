@@ -1,0 +1,235 @@
+{
+    "exam": "english-term-test-20261106-1323-1",
+    "user": "aril",
+    "n": 1,
+    "status": "graded",
+    "token": "zwx6bxw2wfkaq4njoxdif7jtgq2imdxc",
+    "epoch": 1,
+    "seq": 12,
+    "started": "2026-11-05T10:08:14+05:30",
+    "deadline": null,
+    "submitted": "2026-11-05T10:40:31+05:30",
+    "late": false,
+    "auto_submitted": false,
+    "seed": 1447164919,
+    "unlock": null,
+    "slots": [
+        {
+            "slot": 1,
+            "section": 0,
+            "key": "q4c32cbdf5d",
+            "mark": 1,
+            "layout": {
+                "choices": [
+                    2,
+                    3,
+                    1,
+                    0
+                ]
+            }
+        },
+        {
+            "slot": 2,
+            "section": 0,
+            "key": "qa0e25142ba",
+            "mark": 1,
+            "layout": {
+                "choices": [
+                    3,
+                    0,
+                    2,
+                    1
+                ]
+            }
+        },
+        {
+            "slot": 3,
+            "section": 0,
+            "key": "qafeea3c6db",
+            "mark": 1,
+            "layout": {
+                "choices": [
+                    2,
+                    3,
+                    1,
+                    0
+                ]
+            }
+        },
+        {
+            "slot": 4,
+            "section": 0,
+            "key": "qe4294cc849",
+            "mark": 1,
+            "layout": []
+        },
+        {
+            "slot": 5,
+            "section": 0,
+            "key": "q8570b35da5",
+            "mark": 2,
+            "layout": {
+                "blanks": [
+                    {
+                        "choices": [
+                            1,
+                            0,
+                            2
+                        ]
+                    },
+                    {
+                        "choices": [
+                            0,
+                            1
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "slot": 6,
+            "section": 0,
+            "key": "qa260a8363b",
+            "mark": 1,
+            "layout": {
+                "stems": [
+                    1,
+                    0,
+                    3,
+                    2
+                ],
+                "choices": [
+                    1,
+                    0,
+                    2,
+                    3
+                ]
+            }
+        },
+        {
+            "slot": 7,
+            "section": 1,
+            "key": "q488f0c1e26",
+            "mark": 4,
+            "layout": []
+        },
+        {
+            "slot": 8,
+            "section": 1,
+            "key": "qa66b8c6859",
+            "mark": 4,
+            "layout": []
+        },
+        {
+            "slot": 9,
+            "section": 1,
+            "key": "q25daebd8f0",
+            "mark": 4,
+            "layout": []
+        }
+    ],
+    "choose": {
+        "1": 2
+    },
+    "answers": {
+        "1": 1,
+        "2": 2,
+        "3": 0,
+        "4": "Children ",
+        "5": [
+            0,
+            0
+        ],
+        "6": [
+            0,
+            1,
+            2,
+            3
+        ],
+        "7": "<p>Last summer we went to Ooty. We travelled by train. It was very cold there. We saw the botanical garden and went boating on the lake. I bought a toy elephant.</p>",
+        "8": "<p>My pet is a dog called Tommy. He is brown with a white tail. He barks when strangers come. Every evening I take him for a walk. I love him because he is my best friend.</p>"
+    },
+    "flags": [],
+    "grades": {
+        "1": {
+            "fraction": 1,
+            "state": "graded",
+            "mark": 1,
+            "by": "auto"
+        },
+        "2": {
+            "fraction": 1,
+            "state": "graded",
+            "mark": 1,
+            "by": "auto"
+        },
+        "3": {
+            "fraction": 1,
+            "state": "graded",
+            "mark": 1,
+            "by": "auto"
+        },
+        "4": {
+            "fraction": 1,
+            "state": "graded",
+            "matched": "children",
+            "mark": 1,
+            "by": "auto"
+        },
+        "5": {
+            "fraction": 1,
+            "state": "graded",
+            "blanks": [
+                1,
+                1
+            ],
+            "mark": 2,
+            "by": "auto"
+        },
+        "6": {
+            "fraction": 1,
+            "state": "graded",
+            "mark": 1,
+            "by": "auto"
+        },
+        "7": {
+            "fraction": 1,
+            "state": "graded",
+            "by": "teacher",
+            "marked_by": "t_ondra",
+            "marked_at": "2026-11-06T13:23:34+05:30",
+            "comment": "Lovely details!",
+            "mark": 4
+        },
+        "8": {
+            "fraction": 0.875,
+            "state": "graded",
+            "by": "teacher",
+            "marked_by": "t_ondra",
+            "marked_at": "2026-11-06T13:23:34+05:30",
+            "comment": "Good. Check your full stops.",
+            "mark": 3.5
+        },
+        "9": {
+            "fraction": 0,
+            "state": "unanswered",
+            "mark": 0,
+            "by": "auto"
+        }
+    },
+    "score": 14.5,
+    "max": 15,
+    "events": {
+        "saves": 12,
+        "blur": 1,
+        "offline_ms": 0
+    },
+    "saved_at": "2026-11-05T10:40:31+05:30",
+    "last_seen": "2026-11-05T10:40:31+05:30",
+    "paused_sec": 0,
+    "pauses": 0,
+    "student": {
+        "name": "Aril Tovan",
+        "class": "5"
+    }
+}
